@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Головна сторінка сайту</title>
+</head>
+<body>
+<% if (messages.error) { %>
+   <h3 style="color: tomato"> <%= messages.error %></h3>
+<% } %>
+<h1>Ввійти до сайту</h1>
+<form action="/login" method="post">
+
+    <label>Ім'я користувача:
+        <input type="text" name="username"/>
+    </label>
+    <br><br>
+        <label>Пароль:
+            <input type="password" name="password"/>
+        </label>
+
+    <br><br>
+        <input type="submit" value="Ввійти"/>
+</form>
+</body>
+</html>
